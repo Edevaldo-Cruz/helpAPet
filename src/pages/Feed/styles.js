@@ -3,9 +3,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 60,
+    marginTop: 40,
     marginHorizontal: 26,
-    marginBottom: 112,
   },
   title: {
     fontSize: 35,
@@ -16,7 +15,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "baseline",
-    marginBottom: 8,
+    marginBottom: 4,
   },
   coin: {
     width: 36,
@@ -33,7 +32,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginBottom: 8,
+    marginBottom: 4,
   },
   link: {
     alignItems: "center",
@@ -44,32 +43,37 @@ export const styles = StyleSheet.create({
   },
   containerImage: {
     flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "center",
   },
   bob: {
     marginRight: 17,
   },
   evento: {
-    width: 355,
-    height: 200,
-    marginTop: 19,
-    marginBottom: 19,
-    alignItems: "center",
+    width: 350,
+    height: 193,
+    marginLeft: 3,
+    marginTop: 14,
+    marginBottom: 14,
+  },
+  img: {
+    width: 165,
+    height: 175,
+    borderRadius: 20,
   },
   doacao: {
-    marginRight: 32,
+    marginRight: 17,
     paddingTop: 18,
     paddingLeft: 13,
     backgroundColor: "#FE720C",
-    width: 155,
-    height: 165,
-    borderRadius: 20,
+    width: 165,
+    height: 175,
+    borderRadius: 17,
   },
 
   text: {
     marginTop: 14,
     color: "#FFF",
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
   },
 });

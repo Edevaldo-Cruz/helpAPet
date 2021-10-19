@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
-export default function Fedd() {
+export default function Feed() {
   return (
     <>
       <View style={styles.container}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title}>Fedd</Text>
+          <Text style={styles.title}>Feed</Text>
           <Image
             style={styles.coin}
             source={require("../../assets/coin.png")}
@@ -31,10 +31,16 @@ export default function Fedd() {
         </View>
         <View style={styles.containerImage}>
           <TouchableOpacity style={styles.bob}>
-            <Image source={require("../../assets/Bob.png")} />
+            <Image
+              style={styles.img}
+              source={require("../../assets/Bob.png")}
+            />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require("../../assets/Animal.png")} />
+            <Image
+              style={styles.img}
+              source={require("../../assets/Animal.png")}
+            />
           </TouchableOpacity>
         </View>
         <TouchableOpacity>
@@ -53,7 +59,10 @@ export default function Fedd() {
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require("../../assets/cat.png")} />
+            <Image
+              style={styles.img}
+              source={require("../../assets/cat.png")}
+            />
           </TouchableOpacity>
         </View>
       </View>
