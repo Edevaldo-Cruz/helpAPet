@@ -29,41 +29,44 @@ export default function Feed() {
             <Text style={styles.link}> MIM</Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.containerImage}>
-          <TouchableOpacity style={styles.bob}>
-            <Image
-              style={styles.img}
-              source={require("../../assets/Bob.png")}
-            />
-          </TouchableOpacity>
+        <View>
+          <View style={styles.line}></View>
+          <View style={styles.containerImage}>
+            <TouchableOpacity style={styles.bob}>
+              <Image
+                style={styles.img}
+                source={require("../../assets/Bob.png")}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                style={styles.img}
+                source={require("../../assets/Animal.png")}
+              />
+            </TouchableOpacity>
+          </View>
           <TouchableOpacity>
             <Image
-              style={styles.img}
-              source={require("../../assets/Animal.png")}
+              style={styles.evento}
+              source={require("../../assets/Evento.png")}
             />
           </TouchableOpacity>
-        </View>
-        <TouchableOpacity>
-          <Image
-            style={styles.evento}
-            source={require("../../assets/Evento.png")}
-          />
-        </TouchableOpacity>
-        <View style={styles.containerImage}>
-          <TouchableOpacity>
-            <View style={styles.doacao}>
-              <Image source={require("../../assets/dog-food-bowl.png")} />
-              <Text style={styles.text}>
-                Doação de ração para o Abrigo Animal
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Image
-              style={styles.img}
-              source={require("../../assets/cat.png")}
-            />
-          </TouchableOpacity>
+          <View style={styles.containerImage}>
+            <TouchableOpacity>
+              <View style={styles.doacao}>
+                <Image source={require("../../assets/dog-food-bowl.png")} />
+                <Text style={styles.text}>
+                  Doação de ração para o Abrigo Animal
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                style={styles.img}
+                source={require("../../assets/cat.png")}
+              />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </>

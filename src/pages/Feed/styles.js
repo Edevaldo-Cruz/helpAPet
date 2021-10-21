@@ -28,6 +28,14 @@ export const styles = StyleSheet.create({
     color: "#F7BF29",
     fontWeight: "bold",
   },
+  line: {
+    backgroundColor: "#F7BF29",
+    width: 45,
+    height: 2,
+    marginTop: -15,
+    marginBottom: 14,
+    marginLeft: 15,
+  },
   containerLink: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -65,8 +73,8 @@ export const styles = StyleSheet.create({
     paddingTop: 18,
     paddingLeft: 13,
     backgroundColor: "#FE720C",
-    width: 165,
-    height: 175,
+    width: 160,
+    height: 170,
     borderRadius: 17,
   },
 
