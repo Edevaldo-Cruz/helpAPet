@@ -1,21 +1,20 @@
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { FontAwesome5, FontAwesome } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { FontAwesome5 } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
-
-import Login from "./pages/Login";
-import Cadastro from "./pages/Cadastro";
 import Feed from "./pages/Feed";
-import Recompensa from "./pages/Recompensa";
+import Login from "./pages/Login";
 import Perfil from "./pages/Perfil";
 import Animal from "./pages/Animal";
 import Evento from "./pages/Evento";
+import Cadastro from "./pages/Cadastro";
+import Recompensa from "./pages/Recompensa";
 import Instituicao from "./pages/Instituicao";
+import Configuracao from "./pages/Configuracao";
 
-const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 function Tabs() {
   return (
@@ -31,7 +30,7 @@ function Tabs() {
       }}
     >
       <Tab.Screen
-        name="Feed"
+        name="Feed "
         component={Feed}
         options={{
           tabBarIcon: ({ size }) => (
@@ -95,6 +94,11 @@ export default function Routes() {
       <Stack.Screen
         name="Instituição"
         component={Instituicao}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Configuração"
+        component={Configuracao}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

@@ -55,7 +55,7 @@ export default function Feed() {
               />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Evento")}>
             <Image
               style={styles.evento}
               source={require("../../assets/Evento.png")}

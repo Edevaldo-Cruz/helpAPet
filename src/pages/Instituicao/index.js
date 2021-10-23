@@ -6,7 +6,7 @@ import { Ionicons, Fontisto, Entypo } from "@expo/vector-icons";
 import { styles } from "./styles";
 
 export default function Instituição() {
-  const navigator = useNavigation();
+  const navigation = useNavigation();
   return (
     <>
       <View style={styles.container}>
@@ -16,7 +16,7 @@ export default function Instituição() {
             source={require("../../assets/instituicao.png")}
           />
           <TouchableOpacity
-            onPress={() => navigator.navigate("Evento")}
+            onPress={() => navigation.navigate("Evento")}
             style={styles.icons}
           >
             <Ionicons name="close" size={40} color="#000" />

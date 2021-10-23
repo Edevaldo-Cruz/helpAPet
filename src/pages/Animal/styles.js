@@ -11,8 +11,9 @@ export const styles = StyleSheet.create({
   },
   icons: {
     alignItems: "flex-end",
-    marginTop: -315,
-    marginBottom: 270,
+    marginTop: -320,
+    marginBottom: 290,
+    marginRight: 30,
   },
   main: {
     alignItems: "center",

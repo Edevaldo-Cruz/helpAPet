@@ -10,7 +10,7 @@ import { Fontisto } from "@expo/vector-icons";
 import { styles } from "./styles";
 
 export default function Evento() {
-  const navigator = useNavigation();
+  const navigation = useNavigation();
   return (
     <>
       <View style={styles.container}>
@@ -20,7 +20,7 @@ export default function Evento() {
             source={require("../../assets/Rectangle.png")}
           />
           <TouchableOpacity
-            onPress={() => navigator.navigate("Feed")}
+            onPress={() => navigation.navigate("Feed")}
             style={styles.icons}
           >
             <Ionicons name="close" size={40} color="#FFF" />
