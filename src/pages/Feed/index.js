@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 export default function Feed() {
+  const navigation = useNavigation();
   return (
     <>
       <View style={styles.container}>
@@ -18,11 +20,16 @@ export default function Feed() {
           <TouchableOpacity>
             <Text style={styles.link}>TODOS</Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Animal")}>
             <Text style={styles.link}>ANIMAIS</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.link}>EVENTOS</Text>
+            <Text
+              style={styles.link}
+              onPress={() => navigation.navigate("Evento")}
+            >
+              EVENTOS
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity>
             <Text style={styles.link}>PERTO DE</Text>
@@ -32,7 +39,10 @@ export default function Feed() {
         <View>
           <View style={styles.line}></View>
           <View style={styles.containerImage}>
-            <TouchableOpacity style={styles.bob}>
+            <TouchableOpacity
+              style={styles.bob}
+              onPress={() => navigation.navigate("Animal")}
+            >
               <Image
                 style={styles.img}
                 source={require("../../assets/Bob.png")}

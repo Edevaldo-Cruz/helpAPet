@@ -5,7 +5,7 @@ import { Ionicons, Fontisto, Entypo } from "@expo/vector-icons";
 
 import { styles } from "./styles";
 
-export default function Evento() {
+export default function Instituição() {
   const navigator = useNavigation();
   return (
     <>
@@ -13,37 +13,32 @@ export default function Evento() {
         <View>
           <Image
             style={styles.img}
-            source={require("../../assets/eventoG.png")}
+            source={require("../../assets/instituicao.png")}
           />
           <TouchableOpacity
-            onPress={() => navigator.navigate("Feed")}
+            onPress={() => navigator.navigate("Evento")}
             style={styles.icons}
           >
-            <Ionicons name="close" size={40} color="#FFF" />
+            <Ionicons name="close" size={40} color="#000" />
           </TouchableOpacity>
         </View>
         <View style={styles.main}>
-          <View style={styles.calendario}>
-            <Text style={styles.mes}>ABR</Text>
-            <Text style={styles.dia}>15</Text>
-          </View>
-          <Text style={styles.title}>Evento de Castração</Text>
+          <Text style={styles.title}>Abrigo Animal de Joinville</Text>
           <View style={styles.containerSubTitle}>
             <Entypo name="location-pin" size={24} color="#FE9E0C" />
-            <Text style={styles.locationText}>Abrigo Animal de Joinville</Text>
+            <Text style={styles.locationText}>Rua José Schberg</Text>
           </View>
           <Text style={styles.text}>
-            O evento de castração é destinado a todos que possuem um bixinho e
-            não tem como pagar a castração.
+            Foi fundada em julho de 2001 com o objetivo de proteger animais
+            domésticos abandonados e maltratados, providenciar atendimento
+            veterinário, castração, vacinação e procurar novos lares para estes
+            animais além de promover a conscientização da população.
           </Text>
-          <TouchableOpacity
-            onPress={() => navigator.navigate("Instituição")}
-            style={styles.btnInteresse}
-          >
+          <TouchableOpacity style={styles.btnInteresse}>
             <Image
-              source={require("../../assets/calendar-check-regular.png")}
+              source={require("../../assets/external-link-alt-solid.png")}
             />
-            <Text style={styles.btnText}>Tenho interesse</Text>
+            <Text style={styles.btnText}>Visite Nosso Site</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnShare}>
             <Fontisto name="share-a" size={24} color="#FFF" />

@@ -11,8 +11,9 @@ export const styles = StyleSheet.create({
   },
   icons: {
     alignItems: "flex-end",
-    marginTop: -315,
-    marginBottom: 270,
+    marginTop: -325,
+    marginBottom: 290,
+    marginRight: 30,
   },
   main: {
     alignItems: "center",
@@ -20,12 +21,13 @@ export const styles = StyleSheet.create({
     marginHorizontal: 29,
   },
   title: {
-    fontSize: 40,
+    fontSize: 26,
     fontWeight: "700",
     color: "#5F5D58",
   },
   containerSubTitle: {
     flexDirection: "row",
+    marginTop: 7,
   },
   locationText: {
     fontSize: 19,
@@ -33,19 +35,14 @@ export const styles = StyleSheet.create({
     marginRight: 11,
     fontWeight: "bold",
   },
-  number: {
-    fontSize: 19,
-    color: "#FE720C",
-    marginLeft: 6,
-    fontWeight: "bold",
-  },
+
   text: {
-    fontSize: 20,
+    fontSize: 18,
     textAlign: "center",
     color: "#7E7E7E",
     marginTop: 18,
   },
-  btnCoins: {
+  btnInteresse: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
@@ -55,7 +52,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FFC225",
     marginTop: 44,
   },
-  btnCoinsText: {
+  btnText: {
     fontSize: 17,
     fontWeight: "bold",
     color: "#FFF",

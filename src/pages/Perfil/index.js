@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { ScrollView, View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 export default function Perfil() {
   return (
+    //<ScrollView showsVerticalScrollIndicator={false}>
     <View style={styles.container}>
       <View style={styles.containerTitle}>
         <Text style={styles.title}>Perfil</Text>
@@ -56,5 +57,6 @@ export default function Perfil() {
         </View>
       </View>
     </View>
+    // </ScrollView>
   );
 }

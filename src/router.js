@@ -10,6 +10,9 @@ import Cadastro from "./pages/Cadastro";
 import Feed from "./pages/Feed";
 import Recompensa from "./pages/Recompensa";
 import Perfil from "./pages/Perfil";
+import Animal from "./pages/Animal";
+import Evento from "./pages/Evento";
+import Instituicao from "./pages/Instituicao";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -75,8 +78,23 @@ export default function Routes() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Fedd"
+        name="Feed"
         component={Tabs}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Animal"
+        component={Animal}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Evento"
+        component={Evento}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Instituição"
+        component={Instituicao}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
