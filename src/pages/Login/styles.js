@@ -57,4 +57,35 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#E4AF24",
   },
+  contentAlert: {
+    marginTop: 20,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  warningAlert: {
+    paddingLeft: 10,
+    color: "#FF6347",
+    fontSize: 16,
+  },
+  disabled: {
+    backgroundColor: "#CCC",
+    width: 354,
+    height: 50,
+    borderRadius: 30,
+    justifyContent: "center",
+    marginBottom: 20,
+  },
+  entrar: {
+    textAlign: "center",
+    justifyContent: "center",
+  },
+  entrarbtn: {
+    backgroundColor: "#D35400",
+    width: 354,
+    height: 50,
+    borderRadius: 30,
+    justifyContent: "center",
+    marginBottom: 20,
+  },
 });

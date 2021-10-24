@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import firebase from "../../config/firebase";
 
 export default function Cadastro() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [novaSenha, setNovaSenha] = useState("");
+  const [errorRegister, setErrorRegister] = useState("");
   const navigation = useNavigation();
+
+  const register = () => {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, senha)
+      .then((userCredential) => {
+        let user = userCredential.user;
+        navigation.navigate("Feed", { idUser: user.uid });
+      })
+      .catch((error) => {
+        setErrorRegister(true);
+        let errorCode = error.code;
+        let errorMessage = error.message;
+      });
+  };
   return (
     <>
       <View style={styles.container}>
@@ -16,32 +36,32 @@ export default function Cadastro() {
           <View>
             <TextInput
               style={styles.input}
-              placeholder="Usuário"
+              placeholder="Email"
               type="text"
-              /*onChangeText={(text) => setEmail(text)}
-            value={email}*/
+              onChangeText={(text) => setEmail(text)}
+              value={email}
             />
           </View>
           <View>
             <TextInput
               style={styles.input}
-              placeholder="E-mail"
+              secureTextEntry={true}
+              placeholder="Digite sua senha..."
               type="text"
-              /*onChangeText={(text) => setEmail(text)}
-            value={email}*/
+              onChangeText={(text) => setNovaSenha(text)}
+              value={novaSenha}
             />
           </View>
           <View>
             <TextInput
               style={styles.input}
-              placeholder="Senha"
+              placeholder="Digite sua novamente senha..."
               type="text"
-              /*onChangeText={(text) => setEmail(text)}
-            value={email}*/
+              onChangeText={(text) => setSenha(text)}
+              value={senha}
             />
           </View>
-
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn} onPress={register}>
             <Text style={styles.btnText}>Cadastrar</Text>
           </TouchableOpacity>
         </View>

@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { styles } from "./styles";
+import firebase from "../../config/firebase";
 
 export default function Login() {
   const navigation = useNavigation();
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
+
+  const loginFirebase = () => {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, senha)
+      .then((userCredential) => {
+        let user = userCredential.user;
+        navigation.navigate("Feed", { idUser: user.uid });
+      })
+      .catch((error) => {
+        setErrorLogin(true);
+        let errorCode = error.code;
+        let errorMessage = error.message;
+      });
+  };
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <View style={styles.container}>
@@ -19,25 +41,24 @@ export default function Login() {
               style={styles.input}
               placeholder="Usuário"
               type="text"
-              /*onChangeText={(text) => setEmail(text)}
-            value={email}*/
+              onChangeText={(text) => setEmail(text)}
+              value={email}
             />
+            {errorLogin === true ? alert("Email ou senha invalido.") : <View />}
           </View>
 
           <View>
             <TextInput
               style={styles.input}
               placeholder="Senha"
+              secureTextEntry={true}
               type="text"
-              /*onChangeText={(text) => setEmail(text)}
-            value={email}*/
+              onChangeText={(text) => setSenha(text)}
+              value={senha}
             />
           </View>
 
-          <TouchableOpacity
-            style={styles.btn}
-            onPress={() => navigation.navigate("Feed")}
-          >
+          <TouchableOpacity style={styles.btn} onPress={loginFirebase}>
             <Text style={styles.btnText}>Entar</Text>
           </TouchableOpacity>
         </View>
