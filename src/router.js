@@ -12,6 +12,7 @@ import Cadastro from "./pages/Cadastro";
 import Recompensa from "./pages/Recompensa";
 import Instituicao from "./pages/Instituicao";
 import Configuracao from "./pages/Configuracao";
+import SplashScreen from "./pages/SplashScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -65,7 +66,12 @@ function Tabs() {
 
 export default function Routes() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Splash">
+      <Stack.Screen
+        name="Splash"
+        component={SplashScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Login"
         component={Login}
