@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, Modal } from "react-native";
 import { styles } from "./styles";
+import { Entypo } from "@expo/vector-icons";
 
 export default function Feed() {
+  const [modalVisible, setModalVisible] = useState(false);
   const navigation = useNavigation();
   return (
     <>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        statusBarTranslucent={true}
+        onRequestClose={() => {
+          alert("Modal foi fechado.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <View style={styles.lineModal} />
+            <Image source={require("../../assets/dog-food.png")} />
+            <Text style={styles.textModal}>
+              O Abrigo Animal precisa de ração para gatos.
+            </Text>
+            <TouchableOpacity
+              style={styles.buttonClose}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Entypo name="location-pin" size={24} color="#FFF" />
+              <Text style={styles.textStyle}>Localização</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.cancelar}>Cancelar</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
       <View style={styles.container}>
         <View style={styles.containerTitle}>
           <Text style={styles.title}>Feed</Text>
@@ -31,7 +63,7 @@ export default function Feed() {
               EVENTOS
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setModalVisible(true)}>
             <Text style={styles.link}>PERTO DE</Text>
             <Text style={styles.link}> MIM</Text>
           </TouchableOpacity>

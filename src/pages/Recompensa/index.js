@@ -12,27 +12,29 @@ export default function Recompensa() {
         visible={modalVisible}
         statusBarTranslucent={true}
         onRequestClose={() => {
-          alert("Modal has been closed.");
+          alert("Modal foi fechado.");
           setModalVisible(!modalVisible);
         }}
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
+            <View style={styles.line} />
             <Text style={styles.modalText}>Netflix</Text>
-            <Text>
+            <Text style={styles.text}>
               Troque seus pontos por um código promocinal da Netflix com um mês
               de assinatura grátis.
             </Text>
 
-            <Text>20 Pontos</Text>
+            <Text style={styles.pontos}>20 Pontos</Text>
             <TouchableOpacity
-              style={[styles.button, styles.buttonClose]}
+              style={styles.buttonClose}
               onPress={() => setModalVisible(!modalVisible)}
             >
+              <Image source={require("../../assets/check-solid.png")} />
               <Text style={styles.textStyle}>Confirmar</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text>Cancelar</Text>
+            <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.cancelar}>Cancelar</Text>
             </TouchableOpacity>
           </View>
         </View>
