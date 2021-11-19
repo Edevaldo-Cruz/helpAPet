@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+
 import firebase from "../../config/firebase";
+
+import { styles } from "./styles";
 
 export default function Cadastro() {
   const [email, setEmail] = useState("");
@@ -55,6 +57,7 @@ export default function Cadastro() {
           <View>
             <TextInput
               style={styles.input}
+              secureTextEntry={true}
               placeholder="Digite sua novamente senha..."
               type="text"
               onChangeText={(text) => setSenha(text)}

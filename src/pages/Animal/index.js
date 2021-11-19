@@ -1,11 +1,8 @@
 import React from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/core";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
-import { Entypo } from "@expo/vector-icons";
-import { Octicons } from "@expo/vector-icons";
-import { Fontisto } from "@expo/vector-icons";
+import { Ionicons, Entypo, Octicons, Fontisto } from "@expo/vector-icons";
 
 import { styles } from "./styles";
 

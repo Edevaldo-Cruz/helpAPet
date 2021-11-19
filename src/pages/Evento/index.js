@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/core";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+
 import { Ionicons, Fontisto, Entypo } from "@expo/vector-icons";
 
 import { styles } from "./styles";
@@ -37,7 +38,7 @@ export default function Evento() {
             não tem como pagar a castração.
           </Text>
           <TouchableOpacity
-            onPress={() => navigator.navigate("Instituição")}
+            onPress={() => navigation.navigate("Instituição")}
             style={styles.btnInteresse}
           >
             <Image

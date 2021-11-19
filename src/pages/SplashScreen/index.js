@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { Dimensions, SafeAreaView } from "react-native";
 import LottieView from "lottie-react-native";
-
-import dogJson from "../../assets/dog.json";
-import { styles } from "./styles";
+import { Dimensions, SafeAreaView } from "react-native";
 import { useNavigation, CommonActions } from "@react-navigation/core";
+
+import { styles } from "./styles";
+import dogJson from "../../assets/dog.json";
 
 const size = Dimensions.get("window").width * 0.5;
 

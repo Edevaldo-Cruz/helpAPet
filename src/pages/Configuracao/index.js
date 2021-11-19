@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+
+import { Ionicons } from "@expo/vector-icons";
 
 import { styles } from "./styles";
 

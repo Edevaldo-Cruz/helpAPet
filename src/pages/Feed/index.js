@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, Text, Image, TouchableOpacity, Modal } from "react-native";
-import { styles } from "./styles";
+
 import { Entypo } from "@expo/vector-icons";
+
+import { styles } from "./styles";
 
 export default function Feed() {
   const [modalVisible, setModalVisible] = useState(false);
